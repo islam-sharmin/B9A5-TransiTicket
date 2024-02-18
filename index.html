@@ -15,7 +15,7 @@
 </head>
 
 <body class="raleway-font">
-    <header class="max-w-5xl mx-auto hidden">
+    <header id="header" class="max-w-5xl mx-auto">
         <!-- nav -->
         <div class="navbar bg-base-100 ">
             <div class="navbar-start">
@@ -52,7 +52,7 @@
                 <div class="max-w-md">
                     <h1 class="mb-5 text-4xl font-extrabold text-white">End-to-End Travel with <br> <span class="text-[#1DD100]">Transi Paribahan</span></h1>
                     <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button class="btn bg-[#1DD100] text-[#030712]">Get Started</button>
+                    <a href="#details" class="btn bg-[#1DD100] text-[#030712]">Buy Ticket</a>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
 
     <main class="">
         <!-- Best offer section -->
-        <section class="max-w-5xl mx-auto mt-14 hidden">
+        <section id="best-offer" class="max-w-5xl mx-auto mt-14">
             <h1 class="text-3xl font-bold text-center">Best offers for you</h1>
             <div class="flex justify-center items-center gap-5 mt-8">
                 <div class="bg-[#FFBF0F] rounded-2xl flex h-36 flex-1">
@@ -95,7 +95,7 @@
         </section>
 
         <!-- details information -->
-        <section class="mt-12 pb-12 bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[60px] hidden">
+        <section id="details" class="mt-12 pb-12 bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[60px] ">
             <div class="max-w-5xl mx-auto pt-20">
                 <h1 class="text-3xl font-bold text-center">Transi Paribahan</h1>
                 <p class="text-[#03071280] text-center">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
@@ -165,46 +165,56 @@
                             <kbd class="kbd kbd-lg"><img src="images/tabler-icon-steering-wheel.png" alt=""></kbd>
                         </div>
                         <div class="grid grid-cols-5 gap-4">
-                            <p class="">A</p>
-                            <kbd class="btn kbd-lg">A1</kbd>
-                            <kbd class="btn kbd-lg">A2</kbd>
-                            <kbd class="btn kbd-lg">A3</kbd>
-                            <kbd class="btn kbd-lg">A4</kbd>
-                            <p>B</p>
-                            <kbd class="kbd kbd-lg">B1</kbd>
-                            <kbd class="kbd kbd-lg">B2</kbd>
-                            <kbd class="kbd kbd-lg">B3</kbd>
-                            <kbd class="kbd kbd-lg">B4</kbd>
-                            <p>C</p>
-                            <kbd class="kbd kbd-lg">C1</kbd>
-                            <kbd class="kbd kbd-lg">C2</kbd>
-                            <kbd class="kbd kbd-lg">C3</kbd>
-                            <kbd class="kbd kbd-lg">C4</kbd>
-                            <p>D</p>
-                            <kbd class="kbd kbd-lg">D1</kbd>
-                            <kbd class="kbd kbd-lg">D2</kbd>
-                            <kbd class="kbd kbd-lg">D3</kbd>
-                            <kbd class="kbd kbd-lg">D4</kbd>
-                            <p>E</p>
-                            <kbd class="kbd kbd-lg">E1</kbd>
-                            <kbd class="kbd kbd-lg">E2</kbd>
-                            <kbd class="kbd kbd-lg">E3</kbd>
-                            <kbd class="kbd kbd-lg">E4</kbd>
-                            <p>F</p>
-                            <kbd class="kbd kbd-lg">F1</kbd>
-                            <kbd class="kbd kbd-lg">F2</kbd>
-                            <kbd class="kbd kbd-lg">F3</kbd>
-                            <kbd class="kbd kbd-lg">F4</kbd>
-                            <p>G</p>
-                            <kbd class="kbd kbd-lg">G1</kbd>
-                            <kbd class="kbd kbd-lg">G2</kbd>
-                            <kbd class="kbd kbd-lg">G3</kbd>
-                            <kbd class="kbd kbd-lg">G4</kbd>
-                            <p>H</p>
-                            <kbd class="kbd kbd-lg">H1</kbd>
-                            <kbd class="kbd kbd-lg">H2</kbd>
-                            <kbd class="kbd kbd-lg">H3</kbd>
-                            <kbd class="kbd kbd-lg">H4</kbd>
+                            <p class="p-4">A</p>
+                            <kbd id="A1" class="btn kbd-lg">A1</kbd>
+                            <kbd id="A2" class="btn kbd-lg">A2</kbd>
+                            <kbd id="A3" class="btn kbd-lg">A3</kbd>
+                            <kbd id="A4" class="btn kbd-lg">A4</kbd>
+                            <p class="p-4">B</p>
+                            <kbd id="B1" class="btn kbd-lg">B1</kbd>
+                            <kbd id="B2" class="btn kbd-lg">B2</kbd>
+                            <kbd id="B3" class="btn kbd-lg">B3</kbd>
+                            <kbd id="B4" class="btn kbd-lg">B4</kbd>
+                            <p class="p-4">C</p>
+                            <kbd id="C1" class="btn kbd-lg">C1</kbd>
+                            <kbd id="C2" class="btn kbd-lg">C2</kbd>
+                            <kbd id="C3" class="btn kbd-lg">C3</kbd>
+                            <kbd id="C4" class="btn kbd-lg">C4</kbd>
+                            <p class="p-4">D</p>
+                            <kbd id="D1" class="btn kbd-lg">D1</kbd>
+                            <kbd id="D2" class="btn kbd-lg">D2</kbd>
+                            <kbd id="D3" class="btn kbd-lg">D3</kbd>
+                            <kbd id="D4" class="btn kbd-lg">D4</kbd>
+                            <p class="p-4">E</p>
+                            <kbd id="E1" class="btn kbd-lg">E1</kbd>
+                            <kbd id="E2" class="btn kbd-lg">E2</kbd>
+                            <kbd id="E3" class="btn kbd-lg">E3</kbd>
+                            <kbd id="E4" class="btn kbd-lg">E4</kbd>
+                            <p class="p-4">F</p>
+                            <kbd id="F1" class="btn kbd-lg">F1</kbd>
+                            <kbd id="F2" class="btn kbd-lg">F2</kbd>
+                            <kbd id="F3" class="btn kbd-lg">F3</kbd>
+                            <kbd id="F4" class="btn kbd-lg">F4</kbd>
+                            <p class="p-4">G</p>
+                            <kbd id="G1" class="btn kbd-lg">G1</kbd>
+                            <kbd id="G2" class="btn kbd-lg">G2</kbd>
+                            <kbd id="G3" class="btn kbd-lg">G3</kbd>
+                            <kbd id="G4" class="btn kbd-lg">G4</kbd>
+                            <p class="p-4">H</p>
+                            <kbd id="H1" class="btn kbd-lg">H1</kbd>
+                            <kbd id="H2" class="btn kbd-lg">H2</kbd>
+                            <kbd id="H3" class="btn kbd-lg">H3</kbd>
+                            <kbd id="H4" class="btn kbd-lg">H4</kbd>
+                            <p class="p-4">I</p>
+                            <kbd id="I1" class="btn kbd-lg">I1</kbd>
+                            <kbd id="I2" class="btn kbd-lg">I2</kbd>
+                            <kbd id="I3" class="btn kbd-lg">I3</kbd>
+                            <kbd id="I4" class="btn kbd-lg">I4</kbd>
+                            <p class="p-4">J</p>
+                            <kbd id="J1" class="btn kbd-lg">J1</kbd>
+                            <kbd id="J2" class="btn kbd-lg">J2</kbd>
+                            <kbd id="J3" class="btn kbd-lg">J3</kbd>
+                            <kbd id="J4" class="btn kbd-lg">J4</kbd>
                         </div>
                     </div>
                 </div>
@@ -260,7 +270,7 @@
                         <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
                         <p class="text-lg font-bold">Email ID</p>
                         <input type="email" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
-                        <button class="btn bg-[#1DD100] text-white font-extrabold w-full max-w-xs">Next</button>
+                        <button onclick="success()" id="btn-next" class="btn bg-[#1DD100] text-white font-extrabold w-full max-w-xs">Next</button>
                     </div>
 
                     <div class="flex justify-evenly mt-5 mb-4">
@@ -272,7 +282,7 @@
         </section>
 
         <!-- success section -->
-        <section class="bg-[#0307120D] min-h-screen flex flex-col justify-center items-center">
+        <section id="success" class="bg-[#0307120D] min-h-screen flex flex-col justify-center items-center hidden">
             <div class="flex flex-col gap-3 items-center bg-white rounded-2xl p-8">
                 <img src="images/success.png" alt="">
                 <h3 class="text-[#27AE60] text-xl font-bold">SUCCESS</h3>
@@ -289,6 +299,7 @@
     </footer>
 
     <script src="js/ticket.js"></script>
+    <script src="js/utility.js"></script>
 </body>
 
 </html>
