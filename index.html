@@ -15,7 +15,7 @@
 </head>
 
 <body class="raleway-font">
-    <header class="max-w-5xl mx-auto">
+    <header class="max-w-5xl mx-auto hidden">
         <!-- nav -->
         <div class="navbar bg-base-100 ">
             <div class="navbar-start">
@@ -59,9 +59,9 @@
 
     </header>
 
-    <main>
+    <main class="">
         <!-- Best offer section -->
-        <section class="max-w-5xl mx-auto mt-14">
+        <section class="max-w-5xl mx-auto mt-14 hidden">
             <h1 class="text-3xl font-bold text-center">Best offers for you</h1>
             <div class="flex justify-center items-center gap-5 mt-8">
                 <div class="bg-[#FFBF0F] rounded-2xl flex h-36 flex-1">
@@ -95,7 +95,7 @@
         </section>
 
         <!-- details information -->
-        <section class="mt-12 bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[60px]">
+        <section class="mt-12 pb-12 bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[60px] hidden">
             <div class="max-w-5xl mx-auto pt-20">
                 <h1 class="text-3xl font-bold text-center">Transi Paribahan</h1>
                 <p class="text-[#03071280] text-center">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
@@ -145,8 +145,8 @@
             </div>
 
             <!-- seat details -->
-            <div class="mt-8 max-w-5xl mx-auto bg-white">
-                <div class="p-4">
+            <div class="mt-8 max-w-5xl mx-auto bg-white rounded-2xl flex gap-4">
+                <div class="p-4 flex-auto">
                     <h3 class="text-xl font-bold mb-3">Select Your Seat</h3>
                     <hr>
                     <div class="flex justify-between mt-3 mb-3">
@@ -161,36 +161,126 @@
                     </div>
                     <hr>
                     <div>
-                        <div>
+                        <div class="flex justify-end mt-4 mb-4">
                             <kbd class="kbd kbd-lg"><img src="images/tabler-icon-steering-wheel.png" alt=""></kbd>
                         </div>
-                        <div class="grid grid-cols-5">
+                        <div class="grid grid-cols-5 gap-4">
                             <p class="">A</p>
-                            <kbd class="kbd kbd-lg">A1</kbd>
-                            <kbd class="kbd kbd-lg">A2</kbd>
-                            <kbd class="kbd kbd-lg">A3</kbd>
-                            <kbd class="kbd kbd-lg">A4</kbd>
+                            <kbd class="btn kbd-lg">A1</kbd>
+                            <kbd class="btn kbd-lg">A2</kbd>
+                            <kbd class="btn kbd-lg">A3</kbd>
+                            <kbd class="btn kbd-lg">A4</kbd>
                             <p>B</p>
                             <kbd class="kbd kbd-lg">B1</kbd>
                             <kbd class="kbd kbd-lg">B2</kbd>
                             <kbd class="kbd kbd-lg">B3</kbd>
                             <kbd class="kbd kbd-lg">B4</kbd>
+                            <p>C</p>
+                            <kbd class="kbd kbd-lg">C1</kbd>
+                            <kbd class="kbd kbd-lg">C2</kbd>
+                            <kbd class="kbd kbd-lg">C3</kbd>
+                            <kbd class="kbd kbd-lg">C4</kbd>
+                            <p>D</p>
+                            <kbd class="kbd kbd-lg">D1</kbd>
+                            <kbd class="kbd kbd-lg">D2</kbd>
+                            <kbd class="kbd kbd-lg">D3</kbd>
+                            <kbd class="kbd kbd-lg">D4</kbd>
+                            <p>E</p>
+                            <kbd class="kbd kbd-lg">E1</kbd>
+                            <kbd class="kbd kbd-lg">E2</kbd>
+                            <kbd class="kbd kbd-lg">E3</kbd>
+                            <kbd class="kbd kbd-lg">E4</kbd>
+                            <p>F</p>
+                            <kbd class="kbd kbd-lg">F1</kbd>
+                            <kbd class="kbd kbd-lg">F2</kbd>
+                            <kbd class="kbd kbd-lg">F3</kbd>
+                            <kbd class="kbd kbd-lg">F4</kbd>
+                            <p>G</p>
+                            <kbd class="kbd kbd-lg">G1</kbd>
+                            <kbd class="kbd kbd-lg">G2</kbd>
+                            <kbd class="kbd kbd-lg">G3</kbd>
+                            <kbd class="kbd kbd-lg">G4</kbd>
+                            <p>H</p>
+                            <kbd class="kbd kbd-lg">H1</kbd>
+                            <kbd class="kbd kbd-lg">H2</kbd>
+                            <kbd class="kbd kbd-lg">H3</kbd>
+                            <kbd class="kbd kbd-lg">H4</kbd>
                         </div>
                     </div>
                 </div>
 
+                <div class="border-r-2 border-dotted border-[#0307124D]"></div>
+
                 <div>
-                    <h3 class="text-xl font-bold mb-3">Select Your Seat</h3>
-                    <hr>
-                    <div>
+                    <div class="bg-[#0307120D] rounded-2xl p-4 flex-auto mt-3 mr-3">
+                        <h3 class="text-xl font-bold mb-3">Select Your Seat</h3>
+                        <hr>
+                        <div class="grid grid-cols-3 mt-3 mb-3">
+                            <h3 class="text-lg font-bold">Seat</h3>
+                            <h3 class="text-lg font-bold">Class</h3>
+                            <h3 class="text-lg font-bold">Price</h3>
+                        </div>
+                        <hr>
+                        <div class="grid grid-cols-3 mt-3 mb-3">
+                            <p class="text-[#03071280]">C2</p>
+                            <p class="text-[#03071280]">Economy</p>
+                            <p class="text-[#03071280]">550</p>
+                            <p class="text-[#03071280]">C2</p>
+                            <p class="text-[#03071280]">Economy</p>
+                            <p class="text-[#03071280]">550</p>
+                        </div>
+                        <hr>
+
+                        <div class="mb-3">
+                            <div class="flex justify-between mb-3">
+                                <h3 class="text-lg font-bold">Total Price</h3>
+                                <h3 class="text-lg font-bold">BDT 1100</h3>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="input input-bordered flex items-center gap-2">
+                                    <input type="text" class="grow" placeholder="Have any copupon?" />
+                                    <button class="btn bg-[#1DD100] text-white">Apply</button>
+                                </label>
+                            </div>
+
+                            <div class="flex justify-between mb-3">
+                                <h3 class="text-lg font-bold">Grand Total</h3>
+                                <h3 class="text-lg font-bold">BDT 1100</h3>
+                            </div>
+
+                        </div>
 
                     </div>
-                </div>
 
+                    <div class="flex flex-col gap-3 mt-4">
+                        <p class="text-lg font-bold">Passenger Name*</p>
+                        <input type="text" placeholder="Enter your name" class="input input-bordered w-full max-w-xs" />
+                        <p class="text-lg font-bold">Phone Number*</p>
+                        <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
+                        <p class="text-lg font-bold">Email ID</p>
+                        <input type="email" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
+                        <button class="btn bg-[#1DD100] text-white font-extrabold w-full max-w-xs">Next</button>
+                    </div>
+
+                    <div class="flex justify-evenly mt-5 mb-4">
+                        <a>Terms and Conditions</a>
+                        <a>Cancellation Policy</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-
+        <!-- success section -->
+        <section class="bg-[#0307120D] min-h-screen flex flex-col justify-center items-center">
+            <div class="flex flex-col gap-3 items-center bg-white rounded-2xl p-8">
+                <img src="images/success.png" alt="">
+                <h3 class="text-[#27AE60] text-xl font-bold">SUCCESS</h3>
+                <h5 class="text-lg font-semibold">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.</h5>
+                <p>Shortly you will find a confirmation in your email.</p>
+                <button class="btn bg-[#1DD100] text-white font-bold">Continue</button>
+            </div>
+        </section>
 
     </main>
 
