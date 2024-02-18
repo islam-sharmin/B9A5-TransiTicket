@@ -13,6 +13,7 @@ function selectSeat(elementId) {
     const seatElement = document.getElementById(elementId);
 
     const selectedSeats = document.querySelectorAll('.selected').length;
+
     if (selectedSeats < 4) {
         seatElement.classList.remove('available');
         seatElement.classList.add('selected');
@@ -41,14 +42,12 @@ function selectSeat(elementId) {
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = price;
 
-
     } else {
         alert('You can select maximum 4 seats.');
         return;
     }
-
-
 }
+
 
 
 function getTextElementValueById(elementId) {
