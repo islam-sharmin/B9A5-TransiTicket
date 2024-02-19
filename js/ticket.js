@@ -6,26 +6,19 @@ function success() {
     showElementById('success');
 }
 
-function apply() {
-    hideElementById('input-container');
-    showElementById('discount-container');
-}
-
 const continueButton = document.getElementById('btn-continue');
 
 continueButton.addEventListener('click', function() {
     window.location.reload()
 })
 
-let buttonSelected = false;
-
 function handleButtonClick(elementId) {
     const uniqueSeat = document.getElementById(elementId);
-
+    let buttonSelected = false;
     if (!buttonSelected === uniqueSeat) {
         buttonSelected = true;
     } else {
-        alert('You already selected this button.');
+        alert('Seat Already Selected.');
     }
 }
 
