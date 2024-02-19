@@ -2,9 +2,17 @@ function success() {
     hideElementById('header');
     hideElementById('best-offer');
     hideElementById('details');
+    hideElementById('footer');
     showElementById('success');
 }
 
+function countinue (){
+	hideElementById('success');
+	showElementById('header');
+    showElementById('best-offer');
+    showElementById('details');
+    showElementById('footer');
+}
 function apply() {
     hideElementById('input-container');
     showElementById('discount-container');
