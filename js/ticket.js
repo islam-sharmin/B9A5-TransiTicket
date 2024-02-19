@@ -6,13 +6,14 @@ function success() {
     showElementById('success');
 }
 
-function countinue (){
-	hideElementById('success');
-	showElementById('header');
+function countinue() {
+    hideElementById('success');
+    showElementById('header');
     showElementById('best-offer');
     showElementById('details');
     showElementById('footer');
 }
+
 function apply() {
     hideElementById('input-container');
     showElementById('discount-container');
@@ -24,3 +25,70 @@ seatIds.forEach(seatId => {
         selectSeat(seatId);
     });
 });
+
+function selectSeat(elementId) {
+
+    const seatElement = document.getElementById(elementId);
+
+    const selectedSeats = document.querySelectorAll('.selected').length;
+
+    if (selectedSeats < 4) {
+        seatElement.classList.remove('available');
+        seatElement.classList.add('selected');
+        seatElement.classList.add('bg-[#1DD100]');
+        seatElement.classList.add('text-white');
+
+        const seatAvailable = getTextElementValueById('seat-available');
+        const seat = seatAvailable - 1;
+        setTextElementValueById('seat-available', seat);
+
+        const p = document.createElement('p');
+        p.innerText = seatElement.innerText;
+        const p1 = document.createElement('p');
+        p1.innerText = 'Econony';
+        const p2 = document.createElement('p');
+        p2.innerText = '550';
+
+        document.getElementById("seat-details-container").appendChild(p);
+        document.getElementById("seat-details-container").appendChild(p1);
+        document.getElementById("seat-details-container").appendChild(p2);
+
+
+        document.getElementById('input-field').addEventListener('keyup', function(event) {
+            const text = event.target.value;
+            const deleteButton = document.getElementById('btn-apply');
+            if (selectedSeats === 3) {
+                if (text === 'NEW15') {
+                    deleteButton.removeAttribute('disabled');
+                    const discountElement = document.getElementById('discount');
+                    discountAmount = price * 0.15;
+                    discountElement.innerText = discountAmount.toFixed(2);
+
+                    const grandTotal = document.getElementById('grand-total');
+                    grandTotal.innerText = price - discountAmount;
+                } else if (text === 'Couple20') {
+                    deleteButton.removeAttribute('disabled');
+                    const discountElement = document.getElementById('discount');
+                    discountAmount = price * 0.2;
+                    discountElement.innerText = discountAmount.toFixed(2);
+
+                    const grandTotal = document.getElementById('grand-total');
+                    grandTotal.innerText = price - discountAmount;
+                } else {
+                    deleteButton.setAttribute('disabled', true);
+                }
+            }
+        })
+
+        const totalElementPrice = getTextElementValueById('total-price');
+        const price = (totalElementPrice + 550).toFixed(2);
+        setTextElementValueById('total-price', price);
+
+        const grandTotal = document.getElementById('grand-total');
+        grandTotal.innerText = price;
+
+    } else {
+        alert('You can select maximum 4 seats.');
+        return;
+    }
+}
