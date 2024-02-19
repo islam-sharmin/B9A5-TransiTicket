@@ -35,6 +35,33 @@ function selectSeat(elementId) {
         document.getElementById("seat-details-container").appendChild(p1);
         document.getElementById("seat-details-container").appendChild(p2);
 
+
+        document.getElementById('input-field').addEventListener('keyup', function(event) {
+            const text = event.target.value;
+            const deleteButton = document.getElementById('btn-apply');
+            if (selectedSeats === 3) {
+                if (text === 'NEW15') {
+                    deleteButton.removeAttribute('disabled');
+                    const discountElement = document.getElementById('discount');
+                    discountAmount = price * 0.15;
+                    discountElement.innerText = discountAmount.toFixed(2);
+
+                    const grandTotal = document.getElementById('grand-total');
+                    grandTotal.innerText = price - discountAmount;
+                } else if (text === 'Couple20') {
+                    deleteButton.removeAttribute('disabled');
+                    const discountElement = document.getElementById('discount');
+                    discountAmount = price * 0.2;
+                    discountElement.innerText = discountAmount.toFixed(2);
+
+                    const grandTotal = document.getElementById('grand-total');
+                    grandTotal.innerText = price - discountAmount;
+                } else {
+                    deleteButton.setAttribute('disabled', true);
+                }
+            }
+        })
+
         const totalElementPrice = getTextElementValueById('total-price');
         const price = (totalElementPrice + 550).toFixed(2);
         setTextElementValueById('total-price', price);
@@ -47,7 +74,6 @@ function selectSeat(elementId) {
         return;
     }
 }
-
 
 
 function getTextElementValueById(elementId) {

@@ -6,7 +6,7 @@ function success() {
 }
 
 function apply() {
-    hideElementById('input-field');
+    hideElementById('input-container');
     showElementById('discount-container');
 }
 
@@ -16,18 +16,3 @@ seatIds.forEach(seatId => {
         selectSeat(seatId);
     });
 });
-
-document.getElementById('input-field').addEventListener('keyup', function(event) {
-    const text = event.target.value;
-    const deleteButton = document.getElementById('btn-apply');
-    if (text === 'NEW15') {
-        deleteButton.removeAttribute('disabled');
-    } else {
-        deleteButton.setAttribute('disabled', true);
-    }
-    document.getElementById('btn-apply').addEventListener('click', function() {
-        const secret = document.getElementById('input-container');
-        secret.style.display = 'none';
-    })
-
-})
