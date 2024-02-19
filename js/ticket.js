@@ -77,20 +77,31 @@ function selectSeat(elementId) {
             if (selectedSeats === 3) {
                 if (text === 'NEW15') {
                     deleteButton.removeAttribute('disabled');
-                    const discountElement = document.getElementById('discount');
-                    discountAmount = price * 0.15;
-                    discountElement.innerText = discountAmount.toFixed(2);
+                    document.getElementById('btn-apply').addEventListener('click', function() {
+                        hideElementById('input-container');
+                        showElementById('discount-container');
 
-                    const grandTotal = document.getElementById('grand-total');
-                    grandTotal.innerText = price - discountAmount;
-                } else if (text === 'Couple20') {
+                        const discountElement = document.getElementById('discount');
+                        discountAmount = price * 0.15;
+                        discountElement.innerText = discountAmount.toFixed(2);
+
+                        const grandTotal = document.getElementById('grand-total');
+                        grandTotal.innerText = price - discountAmount;
+                    })
+
+                } else if (text === 'Couple 20') {
                     deleteButton.removeAttribute('disabled');
-                    const discountElement = document.getElementById('discount');
-                    discountAmount = price * 0.2;
-                    discountElement.innerText = discountAmount.toFixed(2);
+                    document.getElementById('btn-apply').addEventListener('click', function() {
+                        hideElementById('input-container');
+                        showElementById('discount-container');
 
-                    const grandTotal = document.getElementById('grand-total');
-                    grandTotal.innerText = price - discountAmount;
+                        const discountElement = document.getElementById('discount');
+                        discountAmount = price * 0.15;
+                        discountElement.innerText = discountAmount.toFixed(2);
+
+                        const grandTotal = document.getElementById('grand-total');
+                        grandTotal.innerText = price - discountAmount;
+                    })
                 } else {
                     deleteButton.setAttribute('disabled', true);
                 }
