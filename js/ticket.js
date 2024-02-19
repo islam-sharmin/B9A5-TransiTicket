@@ -49,6 +49,10 @@ function selectSeat(elementId) {
         const p2 = document.createElement('p');
         p2.innerText = '550';
 
+        const showSeatQuantity = getTextElementValueById('seat-quantity');
+        const seatQuantity = showSeatQuantity + 1;
+        setTextElementValueById('seat-quantity', seatQuantity);
+
         document.getElementById("seat-details-container").appendChild(p);
         document.getElementById("seat-details-container").appendChild(p1);
         document.getElementById("seat-details-container").appendChild(p2);
