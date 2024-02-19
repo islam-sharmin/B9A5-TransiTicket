@@ -89,7 +89,7 @@ function selectSeat(elementId) {
                         showElementById('discount-container');
 
                         const discountElement = document.getElementById('discount');
-                        discountAmount = price * 0.15;
+                        discountAmount = price * 0.20;
                         discountElement.innerText = discountAmount.toFixed(2);
 
                         const grandTotal = document.getElementById('grand-total');
